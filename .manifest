@@ -1,0 +1,11 @@
+{
+	"platforms": ["web", "android"],
+	"languages": ["ru_RU"],
+	"properties": {
+		"domain": "ru",
+		"title": "vibratester",
+		"hostname": "android",
+		"version": "0.0.1"
+	},
+	"templater": "jinja2"
+}
