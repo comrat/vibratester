@@ -14,26 +14,26 @@ Item {
 			anchors.horizontalCenter: parent.horizontalCenter;
 
 			Text {
-				width: 200;
+				width: 120;
 				text: "Duration(ms):";
 				color: "#000";
-				font.pixelSize: 32;
+				font.pixelSize: 18;
 				anchors.verticalCenter: parent.verticalCenter;
 			}
 
 			NumberInput {
 				id: durationInput;
-				width: 200;
+				width: 120;
 				height: 100%;
 				backgroundColor: "#ccc";
-				font.pixelSize: 32;
+				font.pixelSize: 18;
 				value: 1000;
 				min: 0;
 			}
 		}
 
 		WebItem {
-			width: 410;
+			width: 250;
 			height: 50;
 			anchors.horizontalCenter: parent.horizontalCenter;
 			radius: 5;
@@ -44,7 +44,7 @@ Item {
 				height: 100%;
 				verticalAlignment: Text.AlignVCenter;
 				horizontalAlignment: Text.AlignHCenter;
-				font.pixelSize: 32;
+				font.pixelSize: 18;
 				text: "START";
 				color: "#fff";
 			}
