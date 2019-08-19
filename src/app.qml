@@ -32,24 +32,23 @@ Item {
 			}
 		}
 
-		WebItem {
-			width: 250;
-			height: 50;
+		Row {
 			anchors.horizontalCenter: parent.horizontalCenter;
-			radius: 5;
-			color: "#558B2F";
+			spacing: 10;
 
-			Text {
-				width: 100%;
-				height: 100%;
-				verticalAlignment: Text.AlignVCenter;
-				horizontalAlignment: Text.AlignHCenter;
-				font.pixelSize: 18;
+			TextButton {
 				text: "START";
-				color: "#fff";
+
+				onClicked: {
+					window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrate", [durationInput.value]);
+				}
 			}
 
-			onClicked: { navigator.vibrate(durationInput.value) }
+			TextButton {
+				text: "STOP";
+
+				onClicked: { }
+			}
 		}
 	}
 
