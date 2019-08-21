@@ -2,6 +2,7 @@ Item {
 	anchors.fill: context;
 
 	Device { id: device; }
+	Vibrator { id: vibrator; }
 
 	Column {
 		y: 30;
@@ -40,14 +41,14 @@ Item {
 				text: "START";
 
 				onClicked: {
-					window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrate", [durationInput.value]);
+					vibrator.vibrateWithPattern()
 				}
 			}
 
 			TextButton {
 				text: "STOP";
 
-				onClicked: { }
+				onClicked: { vibrator.cancel() }
 			}
 		}
 	}
