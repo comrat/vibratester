@@ -16,6 +16,30 @@ Item {
 
 			Text {
 				width: 120;
+				text: "Delay(ms):";
+				color: "#000";
+				font.pixelSize: 18;
+				anchors.verticalCenter: parent.verticalCenter;
+			}
+
+			NumberInput {
+				id: delayInput;
+				width: 120;
+				height: 100%;
+				backgroundColor: "#ccc";
+				font.pixelSize: 18;
+				value: 1000;
+				min: 0;
+			}
+		}
+
+		Row {
+			height: 50;
+			spacing: 10;
+			anchors.horizontalCenter: parent.horizontalCenter;
+
+			Text {
+				width: 120;
 				text: "Duration(ms):";
 				color: "#000";
 				font.pixelSize: 18;
@@ -41,7 +65,7 @@ Item {
 				text: "START";
 
 				onClicked: {
-					vibrator.vibrateWithPattern()
+					vibrator.vibrateWithPattern([delayInput.value, durationInput.value])
 				}
 			}
 

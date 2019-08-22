@@ -1,5 +1,4 @@
 Object {
-
 	vibrate(duration): {
 		window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrate", [duration]);
 	}
