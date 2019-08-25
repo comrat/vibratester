@@ -58,6 +58,21 @@ Item {
 		}
 
 		Row {
+			spacing: 10;
+			anchors.horizontalCenter: parent.horizontalCenter;
+
+			Text {
+				width: 120;
+				text: "Loop:";
+				color: "#000";
+				font.pixelSize: 18;
+				anchors.verticalCenter: parent.verticalCenter;
+			}
+
+			Checkbox { id: loopCheckbox; }
+		}
+
+		Row {
 			anchors.horizontalCenter: parent.horizontalCenter;
 			spacing: 10;
 
@@ -65,7 +80,10 @@ Item {
 				text: "START";
 
 				onClicked: {
-					vibrator.vibrateWithPattern([delayInput.value, durationInput.value])
+					if (loopCheckbox.checked)
+						vibrator.vibrateLooped([delayInput.value, durationInput.value])
+					else
+						vibrator.vibrate(durationInput.value)
 				}
 			}
 

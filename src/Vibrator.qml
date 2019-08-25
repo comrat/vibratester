@@ -3,7 +3,7 @@ Object {
 		window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrate", [duration]);
 	}
 
-	vibrateWithPattern(pattern): {
+	vibrateLooped(pattern): {
 		window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrateWithPattern", [pattern, 1]);
 	}
 
