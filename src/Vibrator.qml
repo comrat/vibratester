@@ -4,7 +4,7 @@ Object {
 	}
 
 	vibrateWithPattern(pattern): {
-		window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrateWithPattern", [pattern, -1]);
+		window.cordova.exec(function(res) { }, function(err) { log("Failed to vibrate", err) }, "AndroidVibration", "vibrateWithPattern", [pattern, 1]);
 	}
 
 	cancel: {
